@@ -1,0 +1,5 @@
+sweep_name: bandwidth
+variable: bandwidth_mbps
+values: [50, 60, 70, 80, 90]
+x_label: Bandwidth (Mbps)
+legacy_values: [10, 20, 30, 40, 50]

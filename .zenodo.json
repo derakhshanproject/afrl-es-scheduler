@@ -1,0 +1,36 @@
+{
+  "title": "AFRL-ES Scheduler: Adaptive Reinforcement Learning-Based Edge Scheduling for Age of Information in IoT",
+  "upload_type": "software",
+  "description": "Article-faithful implementation of the AFRL-ES framework for adaptive reinforcement learning-based edge scheduling in IoT networks. The project includes simulation configuration, synthetic IoT edge environment generation, priority scoring, lightweight reinforcement-learning coefficient adaptation, evaluation metrics, reference-method reproduction, tests, and plotting scripts.",
+  "creators": [
+    {
+      "name": "Derakhshanfard, Nahideh",
+      "affiliation": "Department of Computer Engineering, Tabriz Branch, Islamic Azad University, Tabriz, Iran"
+    },
+    {
+      "name": "Shahi, Javad",
+      "affiliation": "Department of Computer Engineering, Tabriz Branch, Islamic Azad University, Tabriz, Iran"
+    },
+    {
+      "name": "Ghaffari, Ali",
+      "affiliation": "Department of Computer Engineering, Tabriz Branch, Islamic Azad University, Tabriz, Iran"
+    },
+    {
+      "name": "RashidJafari, Fahimeh",
+      "affiliation": "Department of Computer Engineering, Qazvin Branch, Islamic Azad University, Qazvin, Iran"
+    }
+  ],
+  "keywords": [
+    "Internet of Things",
+    "Age of Information",
+    "Reinforcement Learning",
+    "Edge Computing",
+    "Adaptive Scheduling",
+    "Quality of Service",
+    "Energy Efficiency"
+  ],
+  "license": "mit-license",
+  "version": "1.0.0",
+  "language": "eng",
+  "access_right": "open"
+}

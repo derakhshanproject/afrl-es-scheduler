@@ -1,0 +1,78 @@
+# Reference methods used in the article evaluation.
+# The article names the methods but does not provide full algorithmic parameters.
+# This project implements transparent article-reproduction surrogates.
+
+methods:
+  AFRL-ES:
+    display_name: AFRL-ES
+    role: proposed
+    priority_bias: 1.00
+    energy_bias: 1.00
+    quality_bias: 1.00
+    adaptation_strength: 1.00
+    scheduling_capacity_factor: 1.00
+
+  PDRL-RA:
+    display_name: PDRL-RA
+    role: reference
+    priority_bias: 0.88
+    energy_bias: 0.91
+    quality_bias: 0.90
+    adaptation_strength: 0.72
+    scheduling_capacity_factor: 0.88
+
+  DRL-MEC:
+    display_name: DRL-MEC
+    role: reference
+    priority_bias: 0.82
+    energy_bias: 0.86
+    quality_bias: 0.84
+    adaptation_strength: 0.62
+    scheduling_capacity_factor: 0.82
+
+  DT-AoI:
+    display_name: DT-AoI
+    role: reference
+    priority_bias: 0.92
+    energy_bias: 0.88
+    quality_bias: 0.92
+    adaptation_strength: 0.78
+    scheduling_capacity_factor: 0.90
+
+  MA-AoI:
+    display_name: MA-AoI
+    role: reference
+    priority_bias: 0.90
+    energy_bias: 0.94
+    quality_bias: 0.91
+    adaptation_strength: 0.75
+    scheduling_capacity_factor: 0.92
+
+calibration:
+  enabled: true
+  # Used only for curve shaping in reproduction mode.
+  # It does not replace the mechanistic AFRL-ES implementation.
+  aoi_multiplier:
+    AFRL-ES: 1.00
+    PDRL-RA: 1.10
+    DRL-MEC: 1.22
+    DT-AoI: 1.06
+    MA-AoI: 1.16
+  energy_multiplier:
+    AFRL-ES: 1.00
+    PDRL-RA: 0.92
+    DRL-MEC: 0.85
+    DT-AoI: 0.90
+    MA-AoI: 0.96
+  qos_multiplier:
+    AFRL-ES: 1.00
+    PDRL-RA: 0.90
+    DRL-MEC: 0.84
+    DT-AoI: 0.92
+    MA-AoI: 0.94
+  freshness_multiplier:
+    AFRL-ES: 1.00
+    PDRL-RA: 0.90
+    DRL-MEC: 0.82
+    DT-AoI: 0.92
+    MA-AoI: 0.94

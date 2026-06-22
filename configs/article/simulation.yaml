@@ -1,0 +1,74 @@
+# Article-faithful simulation configuration for AFRL-ES.
+# The source article reports a MATLAB R2023a simulation, simulation-based dataset,
+# 100--500 nodes, 50--90 Mbps bandwidth, 1--5 priority levels, alpha=0.1,
+# gamma=0.9, 1000 training episodes, static nodes, periodic traffic,
+# dynamic energy and communication quality, and 10 independent runs.
+
+project:
+  name: AFRL-ES Scheduler
+  method_name: AFRL-ES
+  long_name: Adaptive Reinforcement Learning-Based Edge Scheduling
+  environment: IoT Edge Computing
+  dataset_type: Simulation-Based
+  original_platform: MATLAB R2023a
+  implementation_language: Python
+
+runtime:
+  random_seed: 42
+  independent_runs: 10
+  training_episodes: 1000
+  time_step_seconds: 1.0
+  scheduler_capacity_ratio: 0.22    # proportion of active nodes scheduled per cycle
+  minimum_scheduler_capacity: 5
+  save_raw_episode_metrics: false
+
+network:
+  node_counts: [100, 200, 300, 400, 500]
+  bandwidth_mbps: [50, 60, 70, 80, 90]
+  # Legacy values are included because one article plot visually uses 10--50 Mbps.
+  legacy_bandwidth_mbps: [10, 20, 30, 40, 50]
+  data_priority_levels: [1, 2, 3, 4, 5]
+  traffic_model: Periodic Data Generation
+  node_mobility: Static Nodes
+  communication_quality: Dynamic
+  energy_level: Dynamic
+
+thresholds:
+  energy_threshold_ratio: 0.20      # 20% of initial energy
+  qos_threshold: 0.80
+  quality_threshold: 0.35
+  min_remaining_energy: 1.0
+
+node_initialization:
+  initial_energy_range: [85.0, 115.0]
+  processing_cost_range: [0.05, 0.35]
+  processing_delay_range_ms: [1.0, 20.0]
+  packet_size_range_kb: [32.0, 512.0]
+  power_consumption_range: [0.05, 0.45]
+  communication_quality_range: [0.45, 1.00]
+  transmission_rate_range_mbps: [5.0, 80.0]
+  waiting_time_range_ms: [0.0, 10.0]
+  data_priority_levels: [1, 2, 3, 4, 5]
+
+channel_dynamics:
+  quality_noise_std: 0.035
+  bandwidth_noise_std_ratio: 0.05
+  congestion_base: 0.06
+  congestion_node_scale: 0.00016
+
+energy_dynamics:
+  idle_cost_per_episode: 0.0025
+  active_transmission_cost: 0.030
+  processing_energy_scale: 0.015
+  recovery_probability: 0.015
+  recovery_amount_range: [0.10, 0.40]
+
+traffic:
+  period_range: [3, 9]
+  burst_probability: 0.06
+  burst_priority_boost_probability: 0.35
+  high_priority_cutoff: 4
+
+hardware_reference:
+  platform: Intel Core i7, 16 GB RAM
+  operating_system: Windows 11

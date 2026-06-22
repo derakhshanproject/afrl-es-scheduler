@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+title: "AFRL-ES Scheduler: Adaptive Reinforcement Learning-Based Edge Scheduling for Age of Information in IoT"
+message: "If you use this software, please cite it using the metadata from this file."
+type: software
+authors:
+  - family-names: "Derakhshanfard"
+    given-names: "Nahideh"
+    affiliation: "Department of Computer Engineering, Tabriz Branch, Islamic Azad University, Tabriz, Iran"
+  - family-names: "Shahi"
+    given-names: "Javad"
+    affiliation: "Department of Computer Engineering, Tabriz Branch, Islamic Azad University, Tabriz, Iran"
+  - family-names: "Ghaffari"
+    given-names: "Ali"
+    affiliation: "Department of Computer Engineering, Tabriz Branch, Islamic Azad University, Tabriz, Iran"
+  - family-names: "RashidJafari"
+    given-names: "Fahimeh"
+    affiliation: "Department of Computer Engineering, Qazvin Branch, Islamic Azad University, Qazvin, Iran"
+version: "1.0.0"
+date-released: "2026-06-22"
+license: "MIT"
+repository-code: "https://github.com/derakhshanproject/afrl-es-scheduler"
+keywords:
+  - Internet of Things
+  - Age of Information
+  - Reinforcement Learning
+  - Edge Computing
+  - Adaptive Scheduling

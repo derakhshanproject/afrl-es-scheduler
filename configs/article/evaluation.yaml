@@ -1,0 +1,24 @@
+metrics:
+  - age_of_information
+  - information_freshness
+  - energy_efficiency
+  - quality_of_service
+
+aggregation:
+  report_mean: true
+  report_std: true
+  report_confidence_interval: true
+  confidence_level: 0.95
+
+qos:
+  # The article formula subtracts bandwidth and energy in Eq. 10.
+  # This repository keeps article_exact as the default for reproducibility,
+  # and also exposes corrected for engineering analysis.
+  formula_mode: article_exact
+  corrected_mode_available: true
+
+exports:
+  csv: true
+  json: true
+  markdown: true
+  xlsx: true

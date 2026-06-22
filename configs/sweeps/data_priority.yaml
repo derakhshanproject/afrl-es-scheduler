@@ -1,0 +1,4 @@
+sweep_name: data_priority
+variable: data_priority_level
+values: [1, 2, 3, 4, 5]
+x_label: Data Priority Level

@@ -1,0 +1,52 @@
+# Parameters of the proposed AFRL-ES scheduler.
+# Defaults are normalized and intentionally transparent.
+
+priority_weights:
+  w1_aoi: 0.35
+  w2_priority: 0.30
+  w3_energy: 0.20
+  w4_quality: 0.15
+
+overall_priority_weights:
+  theta1_last_transmission: 0.25
+  theta2_aoi: 0.35
+  theta3_priority: 0.25
+  theta4_energy: 0.15
+
+reward_weights:
+  lambda1_qos: 0.40
+  lambda2_aoi: 0.35
+  lambda3_energy_efficiency: 0.25
+
+metric_weights:
+  gamma1_aoi: 0.40
+  gamma2_last_transmission: 0.30
+  gamma3_energy: 0.30
+  delta1_energy_ratio: 0.65
+  delta2_power: 0.35
+  rho1_delay: 0.45
+  rho2_bandwidth: 0.30
+  rho3_energy: 0.25
+
+learning:
+  alpha: 0.10
+  discount_factor_gamma: 0.90
+  prediction_momentum: 0.90
+  weight_min: 0.01
+  weight_max: 1.00
+  normalize_weights: true
+  update_every_episodes: 1
+
+edge_processing:
+  cache_high_priority_data: true
+  high_priority_cutoff: 4
+  filtering_ratio_low_priority: 0.18
+  local_processing_delay_reduction: 0.18
+  edge_energy_saving_ratio: 0.10
+
+scheduling:
+  sort_order: descending
+  protocol_dynamic: CSMA
+  protocol_stable: TDMA
+  defer_low_priority_when_congested: true
+  congestion_threshold: 0.65

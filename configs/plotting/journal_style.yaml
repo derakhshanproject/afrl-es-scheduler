@@ -1,0 +1,14 @@
+style:
+  dpi: 300
+  width_inches: 7.2
+  height_inches: 4.6
+  marker_size: 6
+  line_width: 2.0
+  grid: true
+  title_font_size: 13
+  axis_font_size: 11
+  legend_font_size: 9
+  use_color: true
+  include_data_labels: false
+exports:
+  formats: [png, pdf, svg]
